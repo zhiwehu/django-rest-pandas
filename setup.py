@@ -13,8 +13,9 @@ LONG_DESCRIPTION = (
 class BuildJS(build_py):
     def run(self):
         try:
-            subprocess.check_call(["npm", "install"])
-            subprocess.check_call(["npm", "run", "build"])
+            pass
+            #subprocess.check_call(["npm", "install"])
+            #subprocess.check_call(["npm", "run", "build"])
         except BaseException as e:
             warnings.warn("Skipping JS build: {}".format(e))
         super().run()
